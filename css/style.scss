@@ -1,0 +1,29 @@
+// 
+@use './mixins';
+@use './home/_navbar';
+@use './home/_aside-left';
+@use './home/_aside-right';
+@use './home/_footer';
+@use './home/_main';
+
+
+// Post
+@use './post/post';
+
+@use './post/aside-right2';
+
+
+@use './post/post_aside_left';
+
+
+//Log in
+@use './login/_login';
+
+
+
+//profile
+@use './profile/profile';;
+
+//Create Post
+@use './post/createPost';
+

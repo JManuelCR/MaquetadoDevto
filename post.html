@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="icon" type="image/x-icon" href="https://res.cloudinary.com/practicaldev/image/fetch/s--E8ak4Hr1--/c_limit,f_auto,fl_progressive,q_auto,w_32/https://dev-to.s3.us-east-2.amazonaws.com/favicon.ico">
+    <title>Post</title>
+</head>
+
+<body>
+    <!-- Header Start -->
+    <header class="navbar-light fixed-top header-static bg-white shadow-sm">
+        <nav class="navbar navbar-expand-lg">
+            <div class="container">
+                <div>
+                    <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="offcanvas"
+                        data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <a class="navbar-brand" href="/"><img style="height:calc( 50px - .3125rem * 2)"
+                            src="/assets/logos/logo-devto.png"></img></a>
+                </div>
+                <form class="form-inline my-2 my-lg-0 d-none d-md-block">
+                    <input class="form-control mr-sm-2 w-auto" type="search" placeholder="Search" aria-label="Search">
+                </form>
+
+                <div class="d-flex items-center h-100 ml-auto">
+                    <button class="btn bg-transparent btn-sm d-md-none">
+                        <img src="./assets/icons/icon-search.svg" alt="Icon reach">
+                    </button>
+                    <a href="new.html" class="btn btn-outline-primary m-auto d-none d-md-flex" id="createPost">Create Post</a>
+                    <button class="btn bg-transparent btn-sm position-relative ">
+                        <img src="./assets/icons/icon-notifications.svg" alt="Icon notification">
+                        <span class="position-absolute translate-middle badge bg-danger">
+                            9
+                            <span class="visually-hidden">unread messages</span>
+                        </span>
+                    </button>
+                    <a href="jonatanare.html" class="btn btn-sm p-1 wrapper-avatar c-btn" style="width: 40px;">
+                        <span class="btn-avatar">
+                            <img class="img-avatar" src="./assets/home/avatar-home.webp" alt="Avatar Session">
+                        </span>
+                    </a>
+                </div>
+
+
+
+                <section role="navigation " class="offcanvas offcanvas-start d-lg-none" tabindex="-1"
+                    id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title" id="offcanvasExampleLabel">DEV Community</h5>
+                        <button type="button" class="btn-close d-lg-none" data-bs-dismiss="offcanvas"
+                            aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <ul class="navbar-nav mb-4">
+                            <li class="nav-item"><a class="nav-link" href="#"><span><img
+                                            src="./assets/icons/icon-home.svg" alt="Icon"></span>Home</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#"><span><img
+                                            src="./assets/icons/icon-reading.svg" alt="Icon"></span>Reading List</a>
+                            </li>
+                            <li class="nav-item"><a class="nav-link" href="#"><span><img
+                                            src="./assets/icons/icon-letter.svg" alt="Icon"></span>Listings</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#"><span><img
+                                            src="./assets/icons/icon-podcasts.svg" alt="Icon"></span>Podcasts</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#"><span><img
+                                            src="./assets/icons/icon-video.svg" alt="Icon"></span>Videos</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#"><span><img
+                                            src="./assets/icons/icon-tags.svg" alt="Icon"></span>Tags</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#"><span><img
+                                            src="./assets/icons/icon-faq.svg" alt="Icon"></span>FAQ</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#"><span><img
+                                            src="./assets/icons/icon-forem-shop.svg" alt="Icon"></span>Forem Shop</a>
+                            </li>
+                            <li class="nav-item"><a class="nav-link" href="#"><span><img
+                                            src="./assets/icons/icon-sponsors.svg" alt="Icon"></span>Sponsors</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#"><span><img
+                                            src="./assets/icons/icon-about.svg" alt="Icon"></span>About</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#"><span><img
+                                            src="./assets/icons/icon-contact.svg" alt="Icon"></span>Contact</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#"><span><img class="img-fluid"
+                                            src="./assets/icons/icon-guies.svg" alt="Icon"></span>Guides</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#"><span><img
+                                            src="./assets/icons/icon-software-comparisons.svg"
+                                            alt="Icon"></span>Software
+                                    comparisons</a></li>
+                        </ul>
+                        <h2 class="other-title">Other</h2>
+                        <ul class="navbar-nav">
+                            <li class="nav-items">
+                                <a class="nav-link" href="#">
+                                    <span>
+                                        <img src="./assets/icons/icon-code-conduct.svg" alt="Icon code conduct">
+                                    </span>
+                                    Code of Conduct
+                                </a>
+                            </li>
+                            <li class="nav-items">
+                                <a class="nav-link" href="#">
+                                    <span>
+                                        <img src="./assets/icons/icon-privacy-policy.svg"
+                                            alt="Icon code privacy policy">
+                                    </span>
+                                    Privacy Policy
+                                </a>
+                            </li>
+                            <li class="nav-items">
+                                <a class="nav-link" href="#">
+                                    <span>
+                                        <img src="./assets/icons/icon-terms-use.svg" alt="Icon term use">
+                                    </span>
+                                    Terms of use
+                                </a>
+                            </li>
+                        </ul>
+                        <ul class="navbar-nav d-flex flex-row justify-content-between">
+                            <li class="nav-items">
+                                <a class="nav-link mx-1" href="#">
+                                    <img src="./assets/icons/icon-twitter.svg" alt="Icon twitter">
+                                </a>
+                            </li>
+                            <li class="nav-items">
+                                <a class="nav-link mx-1" href="#">
+                                    <img src="./assets/icons/icon-facebook.svg" alt="Icon facebook">
+                                </a>
+                            </li>
+                            <li class="nav-items">
+                                <a class="nav-link mx-1" href="#">
+                                    <img src="./assets/icons/icon-github.svg" alt="Icon github">
+                                </a>
+                            </li>
+                            <li class="nav-items">
+                                <a class="nav-link mx-1" href="#">
+                                    <img src="./assets/icons/icon-instagram.svg" alt="Icon instagram">
+                                </a>
+                            </li>
+                            <li class="nav-items">
+                                <a class="nav-link mx-1" href="#">
+                                    <img src="./assets/icons/icon-twitch.svg" alt="Icon twitch">
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <!-- Container START -->
+        <div class="container">
+            <div class="row">
+                <!-- Sidenav START -->
+                <div class="col-md-1 d-none d-md-flex justify-content-center post-aside-left">
+                    <ul class="navbar-nav">
+                        <li class="nav-item text-center">
+                            <a class="nav-link nav-icons nav-icons--like ">
+                                <span class="wrapper-icon text-center">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" role="img" aria-hidden="true" class="crayons-icon">
+                                        <path d="M21.179 12.794l.013.014L12 22l-9.192-9.192.013-.014A6.5 6.5 0 0112 3.64a6.5 6.5 0 019.179 9.154zM4.575 5.383a4.5 4.5 0 000 6.364L12 19.172l7.425-7.425a4.5 4.5 0 10-6.364-6.364L8.818 9.626 7.404 8.21l3.162-3.162a4.5 4.5 0 00-5.99.334l-.001.001z"></path>
+                                    </svg>
+                                </span>
+                            </a>
+                            <span class="wrapper-icon--count">
+                                38
+                            </span>
+                        </li>
+                        <li class="nav-item text-center">
+                            <a href="#" class="nav-link nav-icons nav-icons--unicorn">
+                                <span class="wrapper-icon text-center">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" role="img" aria-hidden="true" class="crayons-icon">
+                                        <path d="M5.645 8.013c.013-.265-.261-.323-.4-.183-1.16 1.17-1.822 3.865-.344 7.32.294.961 1.938 3.19.84 6.131l-.003.006c-.094.255.206.404.366.263 1.395-1.226 1.933-3.593 1.1-6.375-.488-1.657-1.955-4.226-1.559-7.162zm-3.22 2.738c.05-.137-.124-.417-.326-.225-.939.893-1.316 2.863-.976 4.605.547 2.878 2.374 3.526 2.066 6.629-.028.102.176.38.348.154 1.546-2.033.409-4.453-.241-6.006-1.005-2.386-1.087-4.118-.871-5.157z" fill="#08090A"></path>
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M13.622 7.223l8.579-3.68c.598-.256 1.087.547.6.985l-6.618 5.941c.881 2.043 2.738 6.34 2.931 6.775 1.348 3.031-2.055 4.918-3.807 3.583a7.027 7.027 0 01-.623-.574c-.974-.965-2.419-2.398-5.207-1.877.284-2.115-.313-3.737-.883-5.288-.38-1.032-.747-2.032-.837-3.124-.346-3.329 3.763-8.23 4.696-7.953.386.115.326 1.229.266 2.319-.051.948-.102 1.88.143 2.12.145.142.428.43.76.773zM11.5 16.5l2.5.5 2.5 2 1-.5-2-4.5-1.5-4-1.5-1-1-1-1-1.5L10 8l-.5 1.5 1 2.5 1 4.5z"></path>
+                                    </svg>
+                                </span>
+                            </a>
+                            <span class="wrapper-icon--count">
+                                18
+                            </span>
+                        </li>
+                        <li class="nav-item text-center">
+                            <a href="#" class="nav-link nav-icons nav-icons--save">
+                                <span class="wrapper-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" role="img" aria-hidden="true" class="crayons-icon">
+                                        <path d="M5 2h14a1 1 0 011 1v19.143a.5.5 0 01-.766.424L12 18.03l-7.234 4.536A.5.5 0 014 22.143V3a1 1 0 011-1zm13 2H6v15.432l6-3.761 6 3.761V4z"></path>
+                                    </svg>
+                                </span>
+                            </a>
+                            <span class="wrapper-icon--count">
+                                58
+                            </span>
+                        </li>
+                        <li class="nav-item text-center">
+                            <a href="#" class="nav-link nav-icons">
+                                <span class="wrapper-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" role="img" aria-labelledby="acr3clv7ru8wbkl85evfxgom6hiefhiz" aria-hidden="true" class="crayons-icon dropdown-icon"><title id="acr3clv7ru8wbkl85evfxgom6hiefhiz">More...</title><path fill-rule="evenodd" clip-rule="evenodd" d="M7 12a2 2 0 11-4 0 2 2 0 014 0zm7 0a2 2 0 11-4 0 2 2 0 014 0zm5 2a2 2 0 100-4 2 2 0 000 4z"></path></svg>
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- Sidenav END -->
+                <!-- Main content START -->
+                <div class="col-md-11 col-lg-8">
+                    <article class="post card mb-2">
+                        <div class="coverPost">
+                            <!-- <img class="w-100 m-0 " src="/assets/post/last-post-post.webp" alt="Imagen cover"> -->
+                        </div>
+                        <div class="px-5 pt-3 pe-1">
+                            <div class="d-flex justify-content-between">
+                                <div class="d-flex align-items-center me-0">
+                                    <img class="post__autor rounded-circle" src="/assets/home/avatar-home.webp" alt="">
+                                    <div class="ms-2 ">
+                                        <p class="btn post__down mb-0 p-1">Movebike</p>
+                                        <label class="date d-block ms-1"></label>
+                                    </div>
+                                </div>
+                                <div>
+                                    <button class="btn justify-content-end me-2" id="btn-edit">Edit</button>
+                                    <button class="btn justify-content-end me-2" id="btn-delete">Delete</button>
+                                </div>
+                            </div>
+                            <div class="identation p-3 ms-1 pt-2 ps-0">
+                                    <h2 class="post__title">
+                                    </h2>
+                                
+                                <div class="post post_tags d-flex mt-1" >
+                                    <!-- Space for the tags-->
+                                </div>
+                                <p class="post__text mt-3"></p>
+  
+                            </div>
+                        </div>
+                    </article>
+
+
+
+
+                </div>
+                <!-- Main content END -->
+                <!-- Right sidebar START -->
+                <aside class="aside d-none d-lg-block col-lg-3 p-0">
+                    <div class="card__hover card">
+                        <div class="d-flex card__hover--containerimage">
+                            <div class="d-flex align-items-center me-0">
+                            <img class="card__hover--img" src="/assets/home/avatar-home.webp" alt="">
+                            </div>
+                            <div class="ms-2 " style="align-items: flex-end;display: flex;"> 
+                                <p class="card__hover--title">Movebike</p>
+                                
+                            </div>
+                        </div>
+                        <div class="mt-2">
+                            <button class="btn btn-continue">Follow</button>
+                        </div>
+                        <p class="mt-4">
+                            Obsessed with low-code and automation, responsible for 2.8 million downloads at NuGet, and plays 5 musical instruments if you extort me
+                        </p>
+            
+                        <ul>
+                            <li>
+                                <label  class="card__hover--key">Work</label>
+                                <label  class="card__hover--value">Mx🇲🇽</label>
+                            </li>
+                            <li>
+                                <label  class="card__hover--key">Location</label>
+                                <label  class="card__hover--value">Cyprus</label>
+                            </li>
+                            <li>
+                                <label  class="card__hover--key">Joined</label>
+                                <label  class="card__hover--value"><time datetime="2022-03-13T08:00:39Z" class="date">March 13, 2022</time></label>
+                            </li>
+                        </ul>
+                    </div>
+            
+                    <section class="aside card mt-3">
+                        <div class="d-flex nav-tabs p-3  justify-content-between align-items-center">
+                            <h4 class="aside__list form-inline m-0">More from <a href="#">Movebike</a></h4>
+
+                        </div>
+                        <a class="text-decoration-none" href="#">
+                            <div class="p-3 nav-tabs">
+                                <p class="listing__text mb-1">Side Project Sunday! What's the latest?</p>
+                            <ul class="d-flex justify-content-between ps-0 pt-1 mb-0 pe-1">
+                                <li class="listing__figcaption d-flex">#showdev</li>
+                                <li class="listing__figcaption d-flex">#sideprojects</li>
+                                <li class="listing__figcaption d-flex">#watercooler</li>
+                            </ul>
+                            </div>
+                        </a>
+                      
+                        <a class="text-decoration-none" href="#">
+                            <div class="p-3 nav-tabs">
+                                <p class="listing__text mb-1">Meme Monday 😍</p>
+                            <ul class="d-flex justify-content-between ps-0 pt-1 mb-0 pe-3">
+                                <li class="listing__figcaption d-flex">#discuss</li>
+                                <li class="listing__figcaption d-flex">#watercooler</li>
+                                <li class="listing__figcaption d-flex">#jokes</li>
+                            </ul>
+                            </div>
+                        </a>
+                        <a class="text-decoration-none" href="#">
+                            <div class="p-3 nav-tabs">
+                                <p class="listing__text mb-1">Where do you stand on "magic" within languages and frameworks?</p>
+                            <ul class="d-flex justify-content-between ps-0 pt-1 mb-0 pe-3">
+                                <li class="listing__figcaption d-flex">#discuss</li>
+                                <li class="listing__figcaption d-flex">#jokes</li>
+                                <li class="listing__figcaption d-flex">#codequality</li>
+                            </ul>
+                            </div>
+                        </a>
+                        
+                    </section>
+
+                </aside>
+                <!-- Right sidebar END -->
+                <!-- Begin main -->
+
+            </div>
+        </div>
+    </main>
+
+
+
+
+
+
+
+
+
+
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"
+        integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.min.js"
+        integrity="sha384-ODmDIVzN+pFdexxHEHFBQH3/9/vQ9uori45z4JjnFsRydbmQbmL5t1tQ0culUzyK"
+        crossorigin="anonymous"></script>
+    <script type="module" src="./api/post.js"></script>
+    
+</body>
+
+</html>
